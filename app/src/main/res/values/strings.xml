@@ -1,3 +1,565 @@
 <resources>
     <string name="app_name">¿Quién es?</string>
+
+    <string name="tvLiteralNumJugadores">Número de jugadores</string>
+    <string name="tvLiteralCambiarNombre">Hora de hacer los equipos</string>
+    <string name="tvNumeroDescartes">(Descarta %1$d personajes)</string>
+    <string name="tvNumeroCartas">%1$d/%2$d</string>
+    <string name="tvClasificacion">Clasificación</string>
+    <string name="acNumJugadores">Jugador %1$d</string>
+    <string name="tvTablas">-</string>
+
+
+    <string name="tiempo">30</string>
+
+    <string name="RES_TOTAL">Total</string>
+    <string name="RES_R1">R1</string>
+    <string name="RES_R2">R2</string>
+    <string name="RES_R3">R3</string>
+
+
+    <string name="R1_TITULO">Ronda 1</string>
+    <string name="R2_TITULO">Ronda 2</string>
+    <string name="R3_TITULO">Ronda 3</string>
+    <string name="R1_DESCRIPCION">Tienes 30 segundos para conseguir adivinar todos los
+        personajes posibles.\n\n
+        El jugador empieza la ronda y puede decir lo que quiera, menos: \n
+        - Palabras de la misma familia que el personaje propuesto\n
+        - Palabras que "suenen igual"\n
+        - Traducir los nombres a otro idioma\n
+        - Deletrear\n\n
+        En esta ronda no se puede pasar de personaje. Si cometes un fallo de los anteriores,
+        el equipo pierde el turno. </string>
+    <string name="R2_DESCRIPCION">En esta ronda sólo puedes utilizar una palabra para describir
+        al personaje.\nEso sí, ahora puedes pasar de carta si no lo ves claro.\n\n
+        El equipo que resuelve tiene que dar sólo una respuesta, si intentan dar dos a la vez
+        distintas, cuenta la primera que se haya dicho. En el momento que den una contestación que
+        no sea la correcta, hay que pasar.\n\n
+        Después de cada turno, los personajes se barajean. Si el mazo da la vuelta por completo,
+        los personajes que ya te han salido no vuelven a
+        aparecer.</string>
+    <string name="R3_DESCRIPCION">En esta ronda tienes que usar la mímica y los sonidos para que
+        tu equipo descubra al personaje. Pero cuidado, cuando den una respuesta, ya será la
+        definitiva.\n\n
+        Después de cada turno, los personajes se barajean. Si el mazo da la vuelta por completo, los personajes que ya te han salido no vuelven a
+        aparecer.</string>
+
+    <string name="BATALLA_TITULO">Modo batalla</string>
+    <string name="BATALLA_DESCRIPCIÓN">Se juega todos contra todos. Por turnos, el jugador da las
+        pistas para descubrir el personaje y cuando otros de los jugadores acierte se llevan un
+        punto cada uno.\n\nEn la segunda y tercera ronda, hay que esperar a que todos los jugadores
+        respondan (o hasta que alguno acierte) para pasar al siguiente personaje, ¿vas a ser el
+        lanzado que intenta adivinar todo a la primera, o esperarás a tener ayuda si fallan los
+        demás?\n </string>
+
+    <string name="EQ1">Equipo A</string>
+    <string name="EQ2">Equipo B</string>
+    <string name="EQ3">Equipo C</string>
+    <string name="EQ4">Equipo D</string>
+    <string name="J1">Jugador1</string>
+    <string name="J2">Jugador2</string>
+    <string name="J3">Jugador3</string>
+    <string name="J4">Jugador4</string>
+    <string name="J5">Jugador5</string>
+    <string name="J6">Jugador6</string>
+    <string name="J7">Jugador7</string>
+    <string name="J8">Jugador8</string>
+    <string name="J9">Jugador9</string>
+    <string name="J10">Jugador10</string>
+    <string name="J11">Jugador11</string>
+    <string name="J12">Jugador12</string>
+
+    <string name="NIVEL_FACIL">Fácil (4 cartas)</string>
+    <string name="NIVEL_NORMAL">Normal (2 cartas)</string>
+    <string name="NIVEL_DIFICIL">Difícil (0 cartas)</string>
+
+    <string name="DESC_BTN_RESTAR">Botón para restar un jugador</string>
+    <string name="DESC_BTN_SUMAR">Botón para añadir un jugador</string>
+    <string name="DESC_BTN_EQUIPOS">Botón para jugar al modo equipos</string>
+    <string name="DESC_BTN_BATALLA">Botón para jugar al modo batalla</string>
+    <string name="DESC_BTN_LISTO">Botón para indicar que estamos listos</string>
+    <string name="DESC_BTN_DUDAS">Botón con interrogaciones</string>
+    <string name="DESC_BTN_GUARDAR">Botón para guardar</string>
+    <string name="DESC_BTN_LUPA">Botón de una lupa, para mostrar contenido</string>
+    <string name="DESC_BTN_SONIDO">Botón para activar / desactivar sonido</string>
+    <string name="DESC_BTN_ERROR">Botón para indicar que se ha cometido un fallo</string>
+    <string name="DESC_BTN_PASAR">Botón para pasar al siguiente personaje</string>
+    <string name="DESC_BTN_ACIERTO">Botón para decir que hemos acertado</string>
+    <string name="DESC_BTN_SIGUIENTE">Botón para pasar de ronda</string>
+
+    <string name="PR_NUM_JUGADORES">Número de jugadores por defecto:</string>
+    <string name="PR_BARAJAS">Baraja de cartas:</string>
+    <string name="PR_BARAJA_AZUL">Azul</string>
+    <string name="PR_BARAJA_AMARILLO">Amarillo</string>
+    <string name="PR_DIFICULTAD">Dificultad (número de descartes):</string>
+    <string name="PR_NUM_CARTAS">Número de cartas (40 normal):</string>
+    <string name="PR_BORRAR_JUGADORES">Borrar nombre de jugadores</string>
+
+    <string-array name="personajesAzul">
+        <item>Rafael Nadal</item>
+        <item>Zeus</item>
+        <item>(Wolfgang Amadeus) Mozart</item>
+        <item>Miguel Indurain</item>
+        <item>Emmanuel Kant</item>
+        <item>Joaquin Sabina</item>
+        <item>Arthur Miller</item>
+        <item>Miss Moneypenny</item>
+        <item>Nicolas Maquiavelo</item>
+        <item>Spike Lee</item>
+        <item>Concha Piquer</item>
+        <item>Julia Roberts</item>
+        <item>Porthos</item>
+        <item>Elliot Ness</item>
+        <item>Iñaki Perurena</item>
+        <item>Jerry Lee Lewis</item>
+        <item>Christopher Reeves</item>
+        <item>Martín Lutero</item>
+        <item>Rocco Siffredi</item>
+        <item>Penélope</item>
+        <item>Miguel de Unamuno</item>
+        <item>Mick Jagger</item>
+        <item>Carl Lewis</item>
+        <item>John Mc Enroe</item>
+        <item>Ally Mc Beal</item>
+        <item>Noé</item>
+        <item>Jose María Yuste</item>
+        <item>Bruce Springsteen</item>
+        <item>(Teniente Coronel) Tejero</item>
+        <item>Joey Tribbiani</item>
+        <item>Mario Vaquerizo</item>
+        <item>(Maestro) Yoda</item>
+        <item>Edgar Allan Poe</item>
+        <item>Toro Sentado</item>
+        <item>Nelson Mandela</item>
+        <item>Millán Salcedo</item>
+        <item>Sting</item>
+        <item>Magic Johnson</item>
+        <item>Marco Simoncelli</item>
+        <item>Tarzán</item>
+        <item>Freddy Krueger</item>
+        <item>Daniel Pedrosa</item>
+        <item>Santiago Segura</item>
+        <item>Marco Polo</item>
+        <item>Spiderman</item>
+        <item>Arnold Schwarzenegger</item>
+        <item>Antonio Machado</item>
+        <item>Sylvester Stallone</item>
+        <item>Pocahontas</item>
+        <item>Adolfo Suárez</item>
+        <item>(De borbón) Juan Carlos I</item>
+        <item>Jean Cluade Van Damme</item>
+        <item>Merlín</item>
+        <item>Ulises</item>
+        <item>Juanito Oiarzabal</item>
+        <item>Gina Lollobrigida</item>
+        <item>Paco Rabal</item>
+        <item>Andy Warhol</item>
+        <item>Nacho Vidal</item>
+        <item>Isabel Pantoja</item>
+        <item>Richard Nixon</item>
+        <item>Marge Simpson</item>
+        <item>Groucho Marx</item>
+        <item>Chuck Norris</item>
+        <item>Sócrates</item>
+        <item>Mowgli</item>
+        <item>Moisés</item>
+        <item>Scarlett OHara</item>
+        <item>Elvis Presley</item>
+        <item>Bob Marley</item>
+        <item>Sancho Panza</item>
+        <item>Loquillo</item>
+        <item>Raúl</item>
+        <item>Julio Iglesias</item>
+        <item>Ennio Morricone</item>
+        <item>Isaac Newton</item>
+        <item>Peter Pan</item>
+        <item>Benito Mussolini</item>
+        <item>George Lucas</item>
+        <item>George Orwell</item>
+        <item>Harry Potter</item>
+        <item>Charles Lindbergh</item>
+        <item>Michael Jackson</item>
+        <item>Ana Obregón</item>
+        <item>Al Pacino</item>
+        <item>Lee Harvey Oswald</item>
+        <item>Massiel</item>
+        <item>Lassie</item>
+        <item>Jesus Vázquez</item>
+        <item>Quasimodo</item>
+        <item>King Kong</item>
+        <item>Stephen King</item>
+        <item>Ángel Nieto</item>
+        <item>Janis Joplin</item>
+        <item>Christopher Lambert</item>
+        <item>Raphael</item>
+        <item>Curro Jimenez</item>
+        <item>Ana Torroja</item>
+        <item>Jordi Pujol</item>
+        <item>Luke Skywalker</item>
+        <item>(Diego de Silva) Velázquez</item>
+        <item>Jaume I el Conquistador</item>
+        <item>Nefertiti</item>
+        <item>Boris Izaguirre</item>
+        <item>John Fitzgerald Kennedy</item>
+        <item>Akira Kurosawa</item>
+        <item>Brad Pitt</item>
+        <item>(Pierre Auguste) Renoir</item>
+        <item>(Iscariote) Judas</item>
+        <item>John Lennon</item>
+        <item>Whitney Houston</item>
+        <item>Homero</item>
+        <item>Hulk Hogan</item>
+        <item>Alfred Hitchcock</item>
+        <item>Jimi Hendrix</item>
+        <item>Stephen Hawking</item>
+        <item>Tom Hanks</item>
+        <item>Johannes Gutenberg</item>
+        <item>Che Guevara</item>
+        <item>Cary Grant</item>
+        <item>Felipe González</item>
+        <item>Godzilla</item>
+        <item>Jesús Gil (y Gil)</item>
+        <item>Gerónimo</item>
+        <item>Bill Gates</item>
+        <item>Gengis Khan</item>
+        <item>Art Garfunkel</item>
+        <item>Federico García Lorca</item>
+        <item>Galileo Galilei</item>
+        <item>Clark Gable</item>
+        <item>Frankenstein</item>
+        <item>Manuel Fraga</item>
+        <item>Philéas Fogg</item>
+        <item>Bobby Fisher</item>
+        <item>Farruquito</item>
+        <item>Lara Fabian</item>
+        <item>Manolo Escobar</item>
+        <item>John Elton</item>
+        <item>El Greco</item>
+        <item>El Cid</item>
+        <item>Gustave Eiffel</item>
+        <item>Duquesa de Alba</item>
+        <item>Don Quijote</item>
+        <item>Plácido Domingo</item>
+        <item>Doctor Zivago</item>
+        <item>Charles Dickens</item>
+        <item>Poli Díaz</item>
+        <item>Perico (Pedro) Delgado</item>
+        <item>(Tomás de) Torquemada</item>
+        <item>Jesús de Nazaret</item>
+        <item>Paco de Lucía</item>
+        <item>Vasco de Gama</item>
+        <item>Cyrano de Bergerac</item>
+        <item>Charles Darwin</item>
+        <item>Dante</item>
+        <item>Leonardo da Vinci</item>
+        <item>Penélope Cruz</item>
+        <item>Johan Cruiff</item>
+        <item>Davy Crockett</item>
+        <item>Joaquín Cortés</item>
+        <item>Nicolás Copérnico</item>
+        <item>Confucio</item>
+        <item>Conde (Alessandro) Lequio</item>
+        <item>Phil Collins</item>
+        <item>Bill Clinton</item>
+        <item>Eric Clapton</item>
+        <item>Agatha Christie</item>
+        <item>Chiquito de la Calzada</item>
+        <item>Chavo del 8</item>
+        <item>Ray Charles</item>
+        <item>Manu Chao</item>
+        <item>Coco Chanel</item>
+        <item>Julio César</item>
+        <item>Fidel Castro</item>
+        <item>Pau Casals</item>
+        <item>Raffaela Carrá</item>
+        <item>Mariah Carey</item>
+        <item>Al Capone</item>
+        <item>Capitán Haddock</item>
+        <item>Caperucita Roja</item>
+        <item>Esther Cañadas</item>
+        <item>Camarón de la Isla</item>
+        <item>Calimero</item>
+        <item>Montserrat Caballe</item>
+        <item>George Bush</item>
+        <item>Luis Buñuel</item>
+        <item>Enrique Bunbury</item>
+        <item>Andreu Buenafuente</item>
+        <item>(Leonid Illitch) Brejnev</item>
+        <item>David Bowie</item>
+        <item>Miguel Bosé</item>
+        <item>Bono</item>
+        <item>Napoleón Bonaparte</item>
+        <item>Humphrey Bogart</item>
+        <item>Carrero Blanco</item>
+        <item>Tony Blair</item>
+        <item>David Bisbal</item>
+        <item>Bernardo Bertolucci</item>
+        <item>Silvio Berlusconi</item>
+        <item>Roberto Benigni</item>
+        <item>(Alezandre) Graham Bell</item>
+        <item>David Bechkam</item>
+        <item>Barón Rojo</item>
+        <item>Barbanegra</item>
+        <item>Rocky Balboa</item>
+        <item>Alí Babá</item>
+        <item>Manuel Azaña</item>
+        <item>Astérix</item>
+        <item>Isaac Asimov</item>
+        <item>Arquímedes</item>
+        <item>Louis Armstrong</item>
+        <item>Karlos Arguiñano</item>
+        <item>Luis Aragonés</item>
+        <item>Aníbal</item>
+        <item>Ana Belén</item>
+        <item>Pedro Almodóvar</item>
+        <item>Woddy Allen</item>
+        <item>Alf</item>
+        <item>Aladino</item>
+        <item>Afrodita</item>
+    </string-array>
+
+    <string-array name="personajesAmarillo">
+        <item>Monica Lewinsky</item>
+        <item>Paul Mc Cartney</item>
+        <item>(Vladimir Ilich) Lenin</item>
+        <item>Juana de Arco</item>
+        <item>Rembrandt</item>
+        <item>Pitágoras</item>
+        <item>Milan Kundera</item>
+        <item>Harvey Keitel</item>
+        <item>Inspector Clouseau</item>
+        <item>Marina Navratilova</item>
+        <item>Jesse James</item>
+        <item>Concha Velasco</item>
+        <item>Frank Sinatra</item>
+        <item>Prometeo</item>
+        <item>Margaret Thatcher</item>
+        <item>Jesulín de Ubrique</item>
+        <item>John Rambo</item>
+        <item>Dalai Lama</item>
+        <item>Indiana Jones</item>
+        <item>Jack Nicholson</item>
+        <item>Clark Kent</item>
+        <item>Martin Luther King</item>
+        <item>Vladimir Putin</item>
+        <item>Mario Vargas Llosa</item>
+        <item>Lois Lane</item>
+        <item>Karl Marx</item>
+        <item>Bertín Osborne</item>
+        <item>Jesse Owens</item>
+        <item>Peter OToole</item>
+        <item>Nabucodonosor</item>
+        <item>Jack el destripador</item>
+        <item>Abraham Lincoln</item>
+        <item>Poseidón</item>
+        <item>Yoko Ono</item>
+        <item>Iñaki Urdangarín</item>
+        <item>Freddie Mercury</item>
+        <item>Sophia Loren</item>
+        <item>Eddie Murphy</item>
+        <item>Joe Pesci</item>
+        <item>Paul Newman</item>
+        <item>Marilyn Monroe</item>
+        <item>Victor Hugo</item>
+        <item>Rasputín</item>
+        <item>(Félix) Lope de Vega</item>
+        <item>Pelé</item>
+        <item>Francisco Umbral</item>
+        <item>Emiliano Zapata</item>
+        <item>Luis Moya</item>
+        <item>Enrique Iglesias</item>
+        <item>Rocío Jurado</item>
+        <item>Ronaldinho</item>
+        <item>Miguel Ángel</item>
+        <item>Joan Miró</item>
+        <item>Manolete</item>
+        <item>Burce Lee</item>
+        <item>Pablo Picasso</item>
+        <item>Ricardo Corazón de León</item>
+        <item>Popeye</item>
+        <item>Arantxa Sánchez Vicario</item>
+        <item>Diego Armando Maradona</item>
+        <item>Matias Prats</item>
+        <item>Nostradamus</item>
+        <item>Jerry Lewis</item>
+        <item>Robert Redford</item>
+        <item>Moctezuma</item>
+        <item>Jim Morrison</item>
+        <item>Robert Smith</item>
+        <item>(Manuel) Noriega</item>
+        <item>Joseph Stalin</item>
+        <item>Bram Stoker</item>
+        <item>Roman Polaski</item>
+        <item>Platón</item>
+        <item>Alfred Nobel</item>
+        <item>Han Solo</item>
+        <item>Tutankamon</item>
+        <item>Michael Jordan</item>
+        <item>Ringo Starr</item>
+        <item>Mahoma</item>
+        <item>Zinedine Zidane</item>
+        <item>Mac Gyver</item>
+        <item>Calvin Klein</item>
+        <item>Luciano Pavarotti</item>
+        <item>Carlos Sainz</item>
+        <item>Fernando Martín</item>
+        <item>Steven Spielberg</item>
+        <item>Quentin Tarantino</item>
+        <item>George Washington</item>
+        <item>Carmen Maura</item>
+        <item>Javier Sardá</item>
+        <item>Ridley Scott</item>
+        <item>Paul Simon</item>
+        <item>(Friedrich) Nietzsche</item>
+        <item>Andrés Pajares</item>
+        <item>Nerón</item>
+        <item>Maribel Verdú</item>
+        <item>Steve Jobs</item>
+        <item>John Travolta</item>
+        <item>(Antonio) Vivaldi</item>
+        <item>(Francisco Gómez de) Quevedo</item>
+        <item>Joan Manuel Serrat</item>
+        <item>Lucky Luke</item>
+        <item>Peter Jackson</item>
+        <item>Vicent Van Gogh</item>
+        <item>Ramón Llull</item>
+        <item>Eva Perón</item>
+        <item>Madonna</item>
+        <item>Carlos Gardel</item>
+        <item>Pocholo</item>
+        <item>Ayrton Senna</item>
+        <item>(Piotr Ilitch) Tchaikovski</item>
+        <item>Victoria Abril</item>
+        <item>André Agassi</item>
+        <item>Alaska</item>
+        <item>Mohammed Ali</item>
+        <item>Almirante Nelson</item>
+        <item>Fernando Alonso</item>
+        <item>Bibi (Bibiana) Andersen</item>
+        <item>Yasser Arafat</item>
+        <item>Aramis</item>
+        <item>Aristóteles</item>
+        <item>Neil Armstrong</item>
+        <item>Juan María Arzak</item>
+        <item>Fred Astaire</item>
+        <item>Athos</item>
+        <item>Jose María Aznar</item>
+        <item>Juan Sebastián Bach</item>
+        <item>Antonio Banderas</item>
+        <item>Javier Bardemn</item>
+        <item>Batman</item>
+        <item>(Ludwig van) Beethoven</item>
+        <item>Monica Belucci</item>
+        <item>Ingrid Bergman</item>
+        <item>Chuck Berry</item>
+        <item>Chandler Bing</item>
+        <item>Manolo Blahnik</item>
+        <item>Blancanieves</item>
+        <item>Andrea Bocelli</item>
+        <item>Bilbo Bolsón</item>
+        <item>James Bond</item>
+        <item>Björn Borg</item>
+        <item>Emilio Botín</item>
+        <item>Marlon Brando</item>
+        <item>Bruja Avería</item>
+        <item>Buffalo Bill</item>
+        <item>Bugs Bunny</item>
+        <item>Montgomery Burns</item>
+        <item>Emilio Butragueño</item>
+        <item>Calígula</item>
+        <item>Maria Callas</item>
+        <item>James Cameron</item>
+        <item>Nacho Cano</item>
+        <item>Capitán Alatriste</item>
+        <item>Capitán Trueno</item>
+        <item>Julieta Capuleto</item>
+        <item>Carlomagno</item>
+        <item>José Carreras</item>
+        <item>Estrellita Castro</item>
+        <item>Celestina</item>
+        <item>Jackie Chan</item>
+        <item>Chanquete</item>
+        <item>Charlie Chaplin</item>
+        <item>Hugo Chávez</item>
+        <item>Chenoa</item>
+        <item>Jacques Chirac</item>
+        <item>Wiston Churchill</item>
+        <item>Cleopatra</item>
+        <item>Cocodrilo Dundee</item>
+        <item>Conan el Bárbaro</item>
+        <item>El Conde de Montecristo</item>
+        <item>Sean Connery</item>
+        <item>Francis Ford Coppola</item>
+        <item>Jacques (Yves) Cousteau</item>
+        <item>Lara Croft</item>
+        <item>Robinson Crusoe</item>
+        <item>DArtagnan</item>
+        <item>Salvador Dalí</item>
+        <item>Darth Vader</item>
+        <item>Lawrence de Arabia</item>
+        <item>Miguel de Cervantes</item>
+        <item>Juan de la Cierva</item>
+        <item>(Fernando de) Magallanes</item>
+        <item>Robert de Niro</item>
+        <item>James Dean</item>
+        <item>Marujita Díaz</item>
+        <item>Leonardo DiCaprio</item>
+        <item>Dinio</item>
+        <item>Dolly</item>
+        <item>Don Juan</item>
+        <item>Drácula</item>
+        <item>Clint Eastwood</item>
+        <item>Albert Einstein</item>
+        <item>El Fary</item>
+        <item>El Lute</item>
+        <item>Enrique VIII</item>
+        <item>Espinete</item>
+        <item>Juan Manuel Fangio</item>
+        <item>Fernando Fernán Gómez</item>
+        <item>Lola Flores</item>
+        <item>Harrison Ford</item>
+        <item>Francisco Franco</item>
+        <item>Sigmund Freud</item>
+        <item>Yuri Gagarin</item>
+        <item>Greta Garbo</item>
+        <item>Gabriel García Márquez</item>
+        <item>Pau Gasol</item>
+        <item>Antonio Gaudí</item>
+        <item>Gepetto</item>
+        <item>Sete Gibernau</item>
+        <item>(Miguel) Gila</item>
+        <item>Goliat</item>
+        <item>(Francisco de) Goya</item>
+        <item>Matt Groening</item>
+        <item>Forrest Gump</item>
+        <item>Hamlet</item>
+        <item>George Harrison</item>
+        <item>Ernest Hemingway</item>
+        <item>Charlton Heston</item>
+        <item>Dustin Hoffman</item>
+        <item>Sherlock Holmes</item>
+        <item>Anthony Hopkins</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+
+    tools:context=".activitys.APreferencias">
+
+    <LinearLayout
+        android:id="@+id/divLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingGrande"
+
+            style="@style/TextoPreferencias"
+
+            android:text="@string/PR_NUM_JUGADORES"/>
+
+        <EditText
+            android:id="@+id/etNumJugadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:inputType="number"
+            style="@style/TextoPreferencias"
+            android:textSize="@dimen/textoIntermedio"
+            android:textColor="@color/azulVivo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingIntermedio"
+
+            style="@style/TextoPreferencias"
+            android:text="@string/PR_BARAJAS"/>
+
+        <RadioGroup
+            android:id="@+id/rgColores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbColorAzul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/TextoPreferencias"
+
+                android:text="@string/PR_BARAJA_AZUL"
+                android:buttonTint="@color/azulVivo"/>
+
+            <RadioButton
+                android:id="@+id/rbColorAmarillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/TextoPreferencias"
+                android:text="@string/PR_BARAJA_AMARILLO"
+                android:buttonTint="@color/amarillo"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingIntermedio"
+
+            style="@style/TextoPreferencias"
+            android:text="@string/PR_DIFICULTAD"/>
+
+        <Spinner
+            android:id="@+id/spDificultad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/marronOscuro"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingGrande"
+
+            style="@style/TextoPreferencias"
+            android:text="@string/PR_NUM_CARTAS"/>
+
+        <EditText
+            android:id="@+id/etNumeroCartas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:inputType="number"
+            style="@style/TextoPreferencias"
+            android:textSize="@dimen/textoIntermedio"
+            android:textColor="@color/azulVivo"/>
+
+        <CheckBox
+            android:id="@+id/cbBorrarJugadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingIntermedio"
+
+            style="@style/TextoPreferencias"
+            android:buttonTint="@color/white"
+
+            android:text="@string/PR_BORRAR_JUGADORES"/>
+
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingGrande"
+
+        android:background="@drawable/btnguardar"
+        android:contentDescription="@string/DESC_BTN_GUARDAR"
+
+        app:layout_constraintTop_toBottomOf="@+id/divLinear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

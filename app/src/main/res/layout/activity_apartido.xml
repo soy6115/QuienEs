@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
+    android:paddingStart="@dimen/paddingMedio"
+    android:paddingEnd="@dimen/paddingMedio"
+    tools:context=".activitys.APartido">
+
+    <View
+        android:id="@+id/divCentrarVertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divParaCentrar"
+
+        android:visibility="visible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btSonido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingMedio"
+        android:layout_marginEnd="@dimen/paddingMedio"
+
+        android:background="@drawable/btnsonidoon"
+        android:contentDescription="@string/DESC_BTN_SONIDO"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divDatosRonda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingPequeno"
+
+        app:layout_constraintTop_toBottomOf="@id/divCentrarVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvNumeroRonda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            app:layout_constraintHorizontal_chainStyle="packed"
+            tools:text="Ronda 1"
+            style="@style/AzulClaroConSombraMarron"
+            android:textSize="@dimen/textoNumJugadores"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btDudasRonda"/>
+
+        <ImageButton
+            android:id="@+id/btDudasRonda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/paddingIntermedio"
+            android:layout_marginStart="@dimen/paddingIntermedio"
+
+            android:background="@drawable/btndudas"
+            android:contentDescription="@string/DESC_BTN_DUDAS"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvNumeroRonda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divDatosJugador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingIntermedio"
+
+        app:layout_constraintTop_toBottomOf="@id/divDatosRonda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvEquipoResuelve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/paddingPequeno"
+            android:paddingEnd="@dimen/paddingPequeno"
+
+            tools:text="Equipo 1"
+            style="@style/NaranjaConSombra"
+            android:textSize="@dimen/textoJugadores"
+            android:textAlignment="center"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/divNombreYLupa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:gravity="center_horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/tvEquipoResuelve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvJugadorResuelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingStart="@dimen/paddingPequeno"
+                android:paddingEnd="@dimen/paddingPequeno"
+
+                tools:text="Frenis"
+                style="@style/AzulConSombraMarron"
+                android:textSize="@dimen/textoGrande"
+
+                />
+
+            <ImageButton
+                android:id="@+id/btEmpezarResolver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/paddingIntermedio"
+                app:layout_constraintHorizontal_chainStyle="packed"
+
+                android:background="@drawable/lupa"
+                android:contentDescription="@string/DESC_BTN_LUPA"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divDatosResolucion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingIntermedio"
+
+        app:layout_constraintTop_toBottomOf="@id/divDatosJugador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/pbSegundero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="@dimen/paddingGrande"
+            android:paddingRight="@dimen/paddingGrande"
+
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="30"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvCuentaAtras"/>
+
+        <TextView
+            android:id="@+id/tvNumCartas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/textoIntermedio"
+            style="@style/TextoMarron"
+
+            tools:text="30/40"
+
+            app:layout_constraintTop_toBottomOf="@id/pbSegundero"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCuentaAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/paddingIntermedio"
+            android:paddingEnd="@dimen/paddingIntermedio"
+
+            tools:text="30"
+            style="@style/NaranjaConSombra"
+            android:textSize="@dimen/textoTiempo"
+
+            app:layout_constraintTop_toBottomOf="@+id/pbSegundero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvNombrePersonaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+
+            tools:text="Anotnio Machado"
+            style="@style/TextoMarron"
+            android:textSize="@dimen/textoGrande"
+
+            android:gravity="center"
+
+            app:layout_constraintTop_toBottomOf="@id/tvCuentaAtras"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divBotonera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:visibility="invisible"
+
+        android:layout_marginBottom="@dimen/paddingGrande"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/btError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btnerror"
+            android:contentDescription="@string/DESC_BTN_ERROR"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btAcierto"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btPasar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+
+            android:background="@drawable/btnpasar"
+            android:contentDescription="@string/DESC_BTN_PASAR"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btAcierto"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btAcierto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btnsi"
+            android:contentDescription="@string/DESC_BTN_ACIERTO"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btPasar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divBotoneraBatalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="@dimen/paddingGrande"
+
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toBottomOf="@id/divDatosResolucion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/divLiners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginBottom="@dimen/paddingGrande"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btErrorBatalla"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvResuelveJ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    
+                    style="@style/JugadoresBatalla"/>
+
+                <TextView
+                    android:id="@+id/tvResuelveJ5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvResuelveJ3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"/>
+
+                <TextView
+                    android:id="@+id/tvResuelveJ6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/divTerceraFila"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvResuelveJ4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResuelveJ10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    style="@style/JugadoresBatalla"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btErrorBatalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/btnerrorb"
+            android:contentDescription="@string/DESC_BTN_ERROR"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btPasarBatalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+
+            android:background="@drawable/btnpasarb"
+            android:contentDescription="@string/DESC_BTN_PASAR"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

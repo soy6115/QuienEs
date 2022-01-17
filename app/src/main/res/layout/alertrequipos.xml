@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgresultados"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingGrande"
+    >
+
+
+    <TextView
+        android:id="@+id/tvClasificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingStart="@dimen/paddingPequeno"
+        android:paddingEnd="@dimen/paddingPequeno"
+
+        android:layout_marginBottom="@dimen/paddingIntermedio"
+
+        style="@style/ClasificacionResultados"
+
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tvClasificacion"/>
+
+    <TableLayout
+        android:id="@+id/tlTabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="@dimen/paddingIntermedio">
+
+        <TableRow
+            android:layout_marginBottom="@dimen/paddingPequeno">
+
+            <TextView
+                android:layout_column="0"
+                android:layout_weight="10"
+                android:text="" />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_weight="2"
+                style="@style/TablaClasificacion"
+                android:text="@string/RES_TOTAL" />
+            
+            <TextView
+                android:layout_column="2"
+                android:layout_weight="1"
+                style="@style/TablaClasificacion"
+                android:text="@string/RES_R1" />
+            
+            <TextView
+                android:layout_column="3"
+                android:layout_weight="1"
+                style="@style/TablaClasificacion"
+                android:text="@string/RES_R2" />
+            
+            <TextView
+                android:layout_column="4"
+                android:layout_weight="1"
+                style="@style/TablaClasificacion"
+                android:text="@string/RES_R3" />
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trEq1"
+            android:layout_marginBottom="@dimen/paddingPequeno">
+            
+            <TextView
+                android:layout_column="0"
+                android:layout_weight="10"
+                android:tag="nombreEquipo"
+                style="@style/EquipoClasificacion" />
+            
+            <TextView
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:tag="puntosTotal"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:tag="puntosR1"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:tag="puntosR2"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:tag="puntosR3"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trEq2"
+            android:layout_marginBottom="@dimen/paddingPequeno">
+            
+            <TextView
+                android:layout_column="0"
+                android:layout_weight="10"
+                android:tag="nombreEquipo"
+                style="@style/EquipoClasificacion" />
+            
+            <TextView
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:tag="puntosTotal"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:tag="puntosR1"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:tag="puntosR2"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:tag="puntosR3"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trEq3"
+            android:layout_marginBottom="@dimen/paddingPequeno">
+            
+            <TextView
+                android:layout_column="0"
+                android:layout_weight="10"
+                android:tag="nombreEquipo"
+                style="@style/EquipoClasificacion" />
+            
+            <TextView
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:tag="puntosTotal"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:tag="puntosR1"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:tag="puntosR2"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+            
+            <TextView
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:tag="puntosR3"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/trEq4"
+            android:layout_marginBottom="@dimen/paddingPequeno">
+            
+            <TextView
+                android:layout_column="0"
+                android:layout_weight="10"
+                android:tag="nombreEquipo"
+                style="@style/EquipoClasificacion"/>
+        
+            <TextView
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:tag="puntosTotal"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+            <TextView
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:tag="puntosR1"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+            <TextView
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:tag="puntosR2"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+            <TextView
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:tag="puntosR3"
+                style="@style/TablaClasificacion"
+                android:text="@string/tvTablas" />
+        
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/btSiguienteRonda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/btnsiguienteronda"
+        android:contentDescription="@string/DESC_BTN_SIGUIENTE"
+
+        android:layout_gravity="center_horizontal" />
+
+
+
+</LinearLayout>

@@ -1,18 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".activitys.MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fila1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fila2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <ImageButton
+        android:id="@+id/btnPreferencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/paddingMedio"
+        android:layout_marginEnd="@dimen/paddingMedio"
+
+        android:background="@drawable/btnpreferencias"
+        android:contentDescription="@string/DESC_BTN_DUDAS"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divNumJugadores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@id/fila1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvLiteralNumJugadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/tvLiteralNumJugadores"
+            style="@style/NaranjaConSombra"
+            android:textSize="@dimen/textoJugadores"
+            android:paddingStart="@dimen/paddingPequeno"
+            android:paddingEnd="@dimen/paddingPequeno"
+            android:paddingBottom="@dimen/paddingIntermedio"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/btnQuitarJugador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/paddingIntermedio"
+            android:background="@drawable/btnrestajugadores"
+            android:contentDescription="@string/DESC_BTN_RESTAR"
+
+            app:layout_constraintEnd_toStartOf="@id/tvNumJugadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvNumJugadores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            style="@style/AzulConSombraMarron"
+            android:textSize="@dimen/textoNumJugadores"
+
+            android:paddingStart="@dimen/paddingGrande"
+            android:paddingEnd="@dimen/paddingGrande"
+
+            app:layout_constraintTop_toBottomOf="@id/tvLiteralNumJugadores"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnAnadirJugador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginBottom="@dimen/paddingIntermedio"
+            android:background="@drawable/btnsumajugadores"
+            android:contentDescription="@string/DESC_BTN_SUMAR"
+
+            app:layout_constraintStart_toEndOf="@id/tvNumJugadores"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divBotoneraPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintHorizontal_chainStyle="spread"
+
+        app:layout_constraintTop_toTopOf="@id/fila2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnEmpezarEquipos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/btnequipos"
+                android:contentDescription="@string/DESC_BTN_EQUIPOS"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnEmpezarBatalla" />
+
+
+            <ImageButton
+                android:id="@+id/btnEmpezarBatalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/btnbatalla"
+                android:contentDescription="@string/DESC_BTN_BATALLA"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnEmpezarEquipos"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/btnDudasBatalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/btndudas"
+                android:contentDescription="@string/DESC_BTN_DUDAS"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnEmpezarBatalla" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/divModoBatalla"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/paddingIntermedio"
+    android:paddingEnd="@dimen/paddingIntermedio"
+    tools:context=".fragments.Fragment3J">
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J1"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J2"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J3"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J4"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J5"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J6"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J7"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J8"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J9"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J10"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J11"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acBJ12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/J12"
+        android:visibility="gone"
+        style="@style/Autocompletado"/>
+
+</LinearLayout>

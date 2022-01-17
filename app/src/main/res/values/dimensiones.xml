@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textoJugadores">24sp</dimen>
+    <dimen name="textoAutocompletado">26sp</dimen>
+    <dimen name="textoEquipos">29sp</dimen>
+
+    <dimen name="textoMuyPequeno">14sp</dimen>
+    <dimen name="textoPequeno">18sp</dimen>
+    <dimen name="textoNormailillo">22sp</dimen>
+    <dimen name="textoIntermedio">28sp</dimen>
+    <dimen name="textoGrande">32sp</dimen>
+    <dimen name="textoMuyGrande">40sp</dimen>
+
+    <dimen name="textoNumJugadores">50sp</dimen>
+    <dimen name="textoTiempo">100sp</dimen>
+
+    <dimen name="paddingPequeno">5dp</dimen>
+    <dimen name="paddingIntermedio">10dp</dimen>
+    <dimen name="paddingMedio">15dp</dimen>
+    <dimen name="paddingGrande">20dp</dimen>
+    <dimen name="paddingMasGrande">30dp</dimen>
+    <dimen name="paddingMuyGrande">50dp</dimen>
+
+    <dimen name="divParaCentrar">200dp</dimen>
+
+</resources>

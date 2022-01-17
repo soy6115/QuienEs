@@ -10,8 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuienEs.NoActionBar">
         <activity
+            android:name=".activitys.APreferencias"
+            android:exported="true" />
+        <activity
+            android:name=".activitys.APartido"
+            android:exported="true" />
+        <activity
+            android:name=".activitys.ADescartarPersonajes"
+            android:exported="true" />
+        <activity
+            android:name=".activitys.ANombreJugadores"
+            android:exported="true" />
+        <activity
             android:name=".activitys.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

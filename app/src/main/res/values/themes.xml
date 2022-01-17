@@ -2,21 +2,170 @@
     <!-- Base application theme. -->
     <style name="Theme.QuienEs" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/naranja</item>
+        <item name="colorPrimaryVariant">@color/marronOscuro</item>
+        <item name="colorOnPrimary">@color/azulVivo</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/marronOscuro</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="colorSecondaryVariant">@color/azulVivo</item>
+        <item name="colorOnSecondary">@color/naranja</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.QuienEs.NoActionBar">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
 
     <style name="Theme.QuienEs.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <!--MIO-->
+    <style name="TipoLetra" parent="Theme.QuienEs">
+        <item name="android:fontFamily">@font/komika</item>
+    </style>
+
+    <style name="Sombra" parent="TipoLetra">
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">7</item>
+        <item name="android:shadowDy">7</item>
+    </style>
+
+    <style name="SombraNegra" parent="Sombra">
+        <item name="android:shadowColor">@color/black</item>
+    </style>
+
+    <style name="SombraMarron" parent="Sombra">
+        <item name="android:shadowColor">@color/marronOscuro</item>
+    </style>
+
+    <style name="SombraAzul" parent="Sombra">
+        <item name="android:shadowColor">@color/azulVivo</item>
+    </style>
+
+    <style name="AzulConSombraMarron" parent="SombraMarron">
+        <item name="android:textColor">@color/azulVivo</item>
+    </style>
+
+    <style name="AzulClaroConSombraMarron" parent="SombraMarron">
+        <item name="android:textColor">@color/azulHielo</item>
+    </style>
+
+    <style name="TextoMarron" parent="TipoLetra">
+        <item name="android:textColor">@color/marronOscuro</item>
+    </style>
+
+    <style name="NaranjaConSombra" parent="SombraMarron">
+        <item name="android:textColor">@color/naranja</item>
+    </style>
+
+    <style name="TituloAzul" parent="AzulConSombraMarron">
+        <item name="android:textSize">@dimen/textoMuyGrande</item>
+    </style>
+
+    <style name="TituloNaranja" parent="NaranjaConSombra">
+        <item name="android:textSize">@dimen/textoIntermedio</item>
+    </style>
+
+    <style name="PersonajeItem" parent="NaranjaConSombra">
+        <item name="android:textSize">@dimen/textoJugadores</item>
+    </style>
+
+    <style name="TextoPreferencias">
+        <item name="android:fontFamily">@font/dinbold</item>
+        <item name="android:textSize">@dimen/textoPequeno</item>
+        <item name="android:textColor">@color/marronOscuro</item>
+    </style>
+
+    <style name="ClasificacionResultados" parent="SombraMarron">
+        <item name="android:textSize">@dimen/textoIntermedio</item>
+        <item name="android:textColor">@color/azulVivo</item>
+    </style>
+
+    <style name="TablaClasificacion">
+        <item name="android:textSize">@dimen/textoNormailillo</item>
+        <item name="android:textColor">@color/marronOscuro</item>
+        <item name="android:fontFamily">@font/dinbold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="EquipoClasificacion">
+        <item name="android:textSize">@dimen/textoNormailillo</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/dinbold</item>
+        <item name="android:shadowColor">@color/marronOscuro</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">3</item>
+    </style>
+
+
+    <style name="JugadoresBatalla">
+        <item name="android:fontFamily">@font/dinbold</item>
+        <item name="android:textSize">@dimen/textoAutocompletado</item>
+        <item name="android:textColor">@color/azulHielo</item>
+        <item name="android:shadowColor">@color/marronOscuro</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:padding">@dimen/paddingPequeno</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="RellenableAzul" parent="AzulConSombraMarron">
+        <item name="android:textColorHint">@color/azulHielo</item>
+        <item name="android:background">@color/transparente</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RellenableNaranja" parent="NaranjaConSombra">
+        <item name="android:textColorHint">@color/azulHielo</item>
+        <item name="android:background">@color/transparente</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Equipos" parent="RellenableNaranja">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textoEquipos</item>
+    </style>
+
+    <style name="Autocompletado" parent="RellenableAzul">
+        <item name="android:completionThreshold">1</item>
+        <item name="android:ems">10</item>
+        <item name="android:textSize">@dimen/textoAutocompletado</item>
+    </style>
+
+    <style name="TextosSecundarios">
+        <item name="android:fontFamily">@font/dinbold</item>
+        <item name="android:textSize">@dimen/textoPequeno</item>
+        <item name="android:textColor">@color/marronOscuro</item>
+    </style>
+
+    <style name="Theme.QuienEs.NoActionBar.Fullscreen" parent="Theme.QuienEs.NoActionBar">
+        <item name="android:actionBarStyle">
+            @style/Widget.Theme.QuienEs.NoActionBar.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.QuienEs.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
+    <style name="CajaResultados" parent="android:Theme.Dialog">
+        <item name="windowMinWidthMajor">90%</item>
+        <item name="windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@color/transparente</item>
+    </style>
+
 
 </resources>
